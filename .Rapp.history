@@ -1,3 +1,27 @@
+x
+y<-x-3
+y
+z<-c(1.1,9.3.14)
+z<-c(1.1,9,3.14)
+?c
+z
+c(z,555,z)
+z * 2 + 100
+my_sqrt <- sqrt(z-1)
+my_sqrt
+my_div <- z/my_sqrt
+my_div
+c(1,2,3,4)+c(0,10)
+c(1,2,3,4)+c(0,10,100)
+z * 2 + 1000
+my_div
+getwd()
+ls()
+x <- 9
+ls
+ls()
+die()
+dir()
 ?list.files
 ?args
 args(list.files)
@@ -197,193 +221,3 @@ ints > 5
 which(ints>7)
 any(ints<0)
 all(ints>0)
-getwd()
-getwd()
-source  "cachematrix.R"
-source  "cachematrix.R"
-source cachematrix.R
-?source
-source("cachematrix.R")
-x <- matrix(c(1:4),2,2)
-x
-makeCacheMatrix(x)
-w <- makeCacheMatrix(x)
-cacheSolve(w)
-cacheSolve(w)
-w$setmat <- matrix(c(5:8),2,2)
-cacheSolve(w)
-w$setmat <- matrix(c(5:8),2,2)
-w$setmat <- matrix(c(6:9),2,2)
-cacheSolve(w)
-m_inv
-## Put comments here that give an overall description of what your#
-## functions do#
-#
-## Write a short comment describing this function#
-#
-makeCacheMatrix <- function(x = matrix()) {#
-     m_inv <- NULL#
-     setmat <- function(y) {#
-     	x <<- y#
-     	m_inv <<- NULL#
-     }#
-     getmat <- function() x#
-     setinv <- function(mat_inv) m_inv <<- mat_inv#
-     getinv <- function() m_inv#
-     print("inside makeCacheMatrix")#
-     list(setmat = setmat,  setinv =setinv, getmat=getmat, getinv = getinv)#
-}#
-## Write a short comment describing this function#
-#
-cacheSolve <- function(x, ...) {#
-        ## Return a matrix that is the inverse of 'x'#
-        m_inv <- x$getinv()#
-        if (!is.null(m_inv)){#
-        	print("getting cached info")#
-        	return(m_inv)#
-        }#
-        dat_mat <- x$getmat()#
-        m_inv <- solve(dat_mat)#
-        x$setinv(m_inv)#
-        #print(m_inv)#
-        m_inv #
-}
-x <- matrix(c(7:10),2,2)
-x
-w <- makeCacheMatrix(x)
-cacheSolve(w)
-cacheSolve(w)
-w$setmat(matrix(c(6:9),2,2))
-cacheSolve(w)
-cacheSolve(w)
-?ginv
-library(mass)
-library(MASS)
-?ginv
-## Put comments here that give an overall description of what your#
-## functions do#
-#
-## Write a short comment describing this function#
-#
-makeCacheMatrix <- function(x = matrix()) {#
-     m_inv <- NULL#
-     setmat <- function(y) {#
-     	x <<- y#
-     	m_inv <<- NULL#
-     }#
-     getmat <- function() x#
-     setinv <- function(mat_inv) m_inv <<- mat_inv#
-     getinv <- function() m_inv#
-     print("inside makeCacheMatrix")#
-     list(setmat = setmat,  setinv =setinv, getmat=getmat, getinv = getinv)#
-}#
-## Write a short comment describing this function#
-#
-cacheSolve <- function(x, ...) {#
-        ## Return a matrix that is the inverse of 'x'#
-        m_inv <- x$getinv()#
-        if (!is.null(m_inv)){#
-        	print("getting cached info")#
-        	return(m_inv)#
-        }#
-        dat_mat <- x$getmat()#
-        #if ncol(dat_mat) == nrow(dat_mat) {#
-       	#		 m_inv <- solve(dat_mat) 	#
-        #}#
-        #else{#
-        		m_inv <-ginv(dat_mat)#
-        #}#
-        x$setinv(m_inv)#
-        #print(m_inv)#
-        m_inv #
-}
-a <- matrix(c(11:15),2,2)
-a <- matrix(c(11:14),2,2)
-z <- makeCacheMatrix(a)
-cacheSolve(z)
-cacheSolve(z)
-z$setmat(matrix(c(12:9),2,2))
-cacheSolve(z)
-cacheSolve(z)
-## Put comments here that give an overall description of what your#
-## functions do#
-#
-## Write a short comment describing this function#
-#
-makeCacheMatrix <- function(x = matrix()) {#
-     m_inv <- NULL#
-     setmat <- function(y) {#
-     	x <<- y#
-     	m_inv <<- NULL#
-     }#
-     getmat <- function() x#
-     setinv <- function(mat_inv) m_inv <<- mat_inv#
-     getinv <- function() m_inv#
-     print("inside makeCacheMatrix")#
-     list(setmat = setmat,  setinv =setinv, getmat=getmat, getinv = getinv)#
-}#
-## Write a short comment describing this function#
-#
-cacheSolve <- function(x, ...) {#
-        ## Return a matrix that is the inverse of 'x'#
-        m_inv <- x$getinv()#
-        if (!is.null(m_inv)){#
-        	print("getting cached info")#
-        	return(m_inv)#
-        }#
-        dat_mat <- x$getmat()#
-        if ncol(dat_mat) == nrow(dat_mat) {#
-       			 m_inv <- solve(dat_mat) 	#
-        }#
-        else{#
-        		m_inv <-ginv(dat_mat)#
-        }#
-        x$setinv(m_inv)#
-        #print(m_inv)#
-        m_inv #
-}
-## Put comments here that give an overall description of what your#
-## functions do#
-#
-## Write a short comment describing this function#
-#
-makeCacheMatrix <- function(x = matrix()) {#
-     m_inv <- NULL#
-     setmat <- function(y) {#
-     	x <<- y#
-     	m_inv <<- NULL#
-     }#
-     getmat <- function() x#
-     setinv <- function(mat_inv) m_inv <<- mat_inv#
-     getinv <- function() m_inv#
-     print("inside makeCacheMatrix")#
-     list(setmat = setmat,  setinv =setinv, getmat=getmat, getinv = getinv)#
-}#
-## Write a short comment describing this function#
-#
-cacheSolve <- function(x, ...) {#
-        ## Return a matrix that is the inverse of 'x'#
-        m_inv <- x$getinv()#
-        if (!is.null(m_inv)){#
-        	print("getting cached info")#
-        	return(m_inv)#
-        }#
-        dat_mat <- x$getmat()#
-        if (ncol(dat_mat) == nrow(dat_mat)) {#
-       			 m_inv <- solve(dat_mat) 	#
-        }#
-        else{#
-        		m_inv <-ginv(dat_mat)#
-        }#
-        x$setinv(m_inv)#
-        #print(m_inv)#
-        m_inv #
-}
-b <- matrix(c(11:16),2,3)
-b
-q <- makeCacheMatrix(b)
-cacheSolve(q)
-cacheSolve(q)
-q$setmat(matrix(c(9:2),4,2))
-cacheSolve(q)
-cacheSolve(q)
