@@ -1,0 +1,389 @@
+?list.files
+?args
+args(list.files)
+old.dir<-getwd()
+?dir.create()
+dir.create("testdir")
+?setwd()
+setwd("testdir")
+?file.create
+file.create("mytest.R")
+ls()
+getwd()
+list.files()
+file.exists("mytest.R")
+file.info("mytest.R")
+?file.rename
+file.rename("mytest.R","mytest2.R")
+file.remove("mytest.R")
+file.copy("mytest2.R","mytest3.R")
+?file.path
+file.path("mytest3.R")
+?file.path
+file.path(folder1,folder2)
+file.path("folder1","folder2")
+?dir.create
+dir.create(path=file.path("mytest3.R")/testdir2/testdir3,recursive=TRUE)
+dir.create(path=file.path("mytest3.R")\testdir2\testdir3,recursive=TRUE)
+?dir.create
+dir.create(path=file.path("mytest3.R")/"testdir2"/"testdir3",recursive=TRUE)
+dir.create(path=file.path("testdir2","testdir3"),recursive=TRUE)
+setwd(old.dir)
+?unlink
+unlink(testdir,recursive=TRUE)
+unlink("testdir",recursive=TRUE)
+1:20
+pi:10
+15:1
+?`:`
+seq(1,20)
+seq(0,10,by=0.5)
+my_seq <- seq(5,10,length=30)
+length(my_seq)
+1:length(my_seq)
+seq(1,length(my_seq),by=1)
+seq(along.with = my_seq)
+seq_along(my_seq)
+rep(0,times=40)
+rep(c(0,1,2),times=10)
+rep(c(0,1,2),each=10)
+num_vect <- c(0.5,55,-10,6)
+tf <- is.true(num_vect<1)
+?is
+tf <- is(num_vect<1)
+tf <- num_vect < 1
+tf
+num_vect >= 6
+my_char <- c()
+my_char <- c("My","name","is")
+my_char
+paste(my_char, collapse=" ")
+myname <- c(my_char,"Raakhee")
+my_name <- c(my_char,"Raakhee")
+my_name <- c(my_char,"RG")
+my_name
+my_name <- c(my_char,"RG")
+my_name <- c(my_char, "RG")
+my_name <- c(my_char, "RG").
+my_name <- c(my_char, "RG")
+my_name <- c(my_char, "Raakhee")
+my_name <- c(my_char, "RN")
+info()
+skip()
+my_name <- c(my_char, "RG")
+skip()
+play()
+nxt()
+my_name <- c(my_char, "your-name_here")
+my_name
+paste(my_name, collapse=" ")
+paste("Hello","world",sep=" ")
+paste("Hello", "world", sep=" ")
+paste("Hello", "world!", sep=" ")
+paste(1:3,c("X","Y","Z"),sep="")
+paste(LETTERS,1:4,sep="-")
+info()
+main()
+info()
+main()
+x <- c(44,NA,5,NA)
+x * 3
+y <- rnorm(1000)
+z <- rep(NA,1000)
+my_data <- sample(c(y,z),100)
+my_na <- is.na(my_data)
+my_na
+my_data==NA
+?sum
+sum(my_na)
+my_data
+0/0
+Inf- Inf
+main()
+x
+x[1:10]
+x[is.na(x)]
+y <- x[!is.na(x)]
+y
+y[y>0]
+x[x>0]
+x[!is.na(x) & x>0]
+y[c(3,5,7)]
+y[c(3, 5, 7)]
+yind <- c(3,5,7)
+y[c(3, 5, 7)]
+info()
+y
+y[c(3, 5, 7)]
+skip()
+x[c(3,5,7)]
+x[0]
+x[3000]
+x[c(-2,-10)]
+x[-c(2,10)]
+vect <- c(foo=11, bar=2, norf=NA)
+vect
+?names
+names(vect)
+vect2 <- c(11,2,NA)
+names(vect2) <- c("foo","bar","norf")
+identical(vect,vect2)
+vect["bar"]
+vect[c("foo","bar")]
+main()
+my_vector <- 1:20
+my_vector
+dim(my_vector)
+length(my_vector)
+dim(my_vector) <- c(4,5)
+dim(my_vector)
+attributes(my_vector)
+my_vector
+class(my_vector)
+my_matrix <- my_vector
+?matrix
+my_matrix <- matrix(1:20,nrow=4,ncol=5)
+?matrix
+my_matrix2 <- matrix(1:20,nrow=4,ncol=5)
+?matrix
+my_matrix2 <- matrix(data=1:20,nrow=4,ncol=5)
+skip()
+my_matrix2 <- matrix(1:20, nrow=4, ncol=5)
+skip()
+my_matrix2 <- matrix(1:20, nrow=4, ncol=5)
+my_matrix2 <- matrix(1:20,nrow=4,ncol=5)
+my_matrix3 <- matrix(1:20,nrow=4,ncol=5)
+my_matrix2 <- matrix(1:20,nrow=4,ncol=5)
+skip()
+my_matrix2 <- matrix(1:20, nrow=4, ncol=5)
+info()
+skip()
+my_matrix2 <- matrix(1:20, nrow=4, ncol=5)
+skip()
+main()
+my_matrix2 <- matrix(1:20,nrow=4,ncol=5)
+identical(my_matrix,my_matrix2)
+patients <- c("Bill","Gina","Kelly","Sean")
+cbind(patients,my_matrix)
+my_data <- data.frame(patients, my_matrix)
+my_data
+class(my_data)
+cnames <- ("patient","age","weight","bp","rating","test")
+cnames <- ("patient", "age", "weight","bp","rating","test")
+cnames <- c("patient", "age", "weight","bp","rating","test")
+?colnames
+colnames(my_data) <- cnames
+my_data
+TRUE==TRUE
+(FALSE==TRUE) == FALSE
+6==7
+6 < 7
+10<=10
+5 != 7
+!(5==7)
+FALSE & FALSE
+TRUE & c(TRUE,FALSE,FALSE)
+TRUE && c(TRUE,FALSE,FALSE)
+TRUE | c(TRUE,FALSE,FALSE)
+TRUE || c(TRUE,FALSE,FALSE)
+5 > 8 || 6 != 8 && 4 > 3.9
+isTRUE(6>4)
+identical('twins','twins')
+xor(5==6,!FALSE)
+ints <- sample(10)
+ints
+ints > 5
+?which
+which(ints>7)
+any(ints<0)
+all(ints>0)
+getwd()
+getwd()
+source  "cachematrix.R"
+source  "cachematrix.R"
+source cachematrix.R
+?source
+source("cachematrix.R")
+x <- matrix(c(1:4),2,2)
+x
+makeCacheMatrix(x)
+w <- makeCacheMatrix(x)
+cacheSolve(w)
+cacheSolve(w)
+w$setmat <- matrix(c(5:8),2,2)
+cacheSolve(w)
+w$setmat <- matrix(c(5:8),2,2)
+w$setmat <- matrix(c(6:9),2,2)
+cacheSolve(w)
+m_inv
+## Put comments here that give an overall description of what your#
+## functions do#
+#
+## Write a short comment describing this function#
+#
+makeCacheMatrix <- function(x = matrix()) {#
+     m_inv <- NULL#
+     setmat <- function(y) {#
+     	x <<- y#
+     	m_inv <<- NULL#
+     }#
+     getmat <- function() x#
+     setinv <- function(mat_inv) m_inv <<- mat_inv#
+     getinv <- function() m_inv#
+     print("inside makeCacheMatrix")#
+     list(setmat = setmat,  setinv =setinv, getmat=getmat, getinv = getinv)#
+}#
+## Write a short comment describing this function#
+#
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+        m_inv <- x$getinv()#
+        if (!is.null(m_inv)){#
+        	print("getting cached info")#
+        	return(m_inv)#
+        }#
+        dat_mat <- x$getmat()#
+        m_inv <- solve(dat_mat)#
+        x$setinv(m_inv)#
+        #print(m_inv)#
+        m_inv #
+}
+x <- matrix(c(7:10),2,2)
+x
+w <- makeCacheMatrix(x)
+cacheSolve(w)
+cacheSolve(w)
+w$setmat(matrix(c(6:9),2,2))
+cacheSolve(w)
+cacheSolve(w)
+?ginv
+library(mass)
+library(MASS)
+?ginv
+## Put comments here that give an overall description of what your#
+## functions do#
+#
+## Write a short comment describing this function#
+#
+makeCacheMatrix <- function(x = matrix()) {#
+     m_inv <- NULL#
+     setmat <- function(y) {#
+     	x <<- y#
+     	m_inv <<- NULL#
+     }#
+     getmat <- function() x#
+     setinv <- function(mat_inv) m_inv <<- mat_inv#
+     getinv <- function() m_inv#
+     print("inside makeCacheMatrix")#
+     list(setmat = setmat,  setinv =setinv, getmat=getmat, getinv = getinv)#
+}#
+## Write a short comment describing this function#
+#
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+        m_inv <- x$getinv()#
+        if (!is.null(m_inv)){#
+        	print("getting cached info")#
+        	return(m_inv)#
+        }#
+        dat_mat <- x$getmat()#
+        #if ncol(dat_mat) == nrow(dat_mat) {#
+       	#		 m_inv <- solve(dat_mat) 	#
+        #}#
+        #else{#
+        		m_inv <-ginv(dat_mat)#
+        #}#
+        x$setinv(m_inv)#
+        #print(m_inv)#
+        m_inv #
+}
+a <- matrix(c(11:15),2,2)
+a <- matrix(c(11:14),2,2)
+z <- makeCacheMatrix(a)
+cacheSolve(z)
+cacheSolve(z)
+z$setmat(matrix(c(12:9),2,2))
+cacheSolve(z)
+cacheSolve(z)
+## Put comments here that give an overall description of what your#
+## functions do#
+#
+## Write a short comment describing this function#
+#
+makeCacheMatrix <- function(x = matrix()) {#
+     m_inv <- NULL#
+     setmat <- function(y) {#
+     	x <<- y#
+     	m_inv <<- NULL#
+     }#
+     getmat <- function() x#
+     setinv <- function(mat_inv) m_inv <<- mat_inv#
+     getinv <- function() m_inv#
+     print("inside makeCacheMatrix")#
+     list(setmat = setmat,  setinv =setinv, getmat=getmat, getinv = getinv)#
+}#
+## Write a short comment describing this function#
+#
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+        m_inv <- x$getinv()#
+        if (!is.null(m_inv)){#
+        	print("getting cached info")#
+        	return(m_inv)#
+        }#
+        dat_mat <- x$getmat()#
+        if ncol(dat_mat) == nrow(dat_mat) {#
+       			 m_inv <- solve(dat_mat) 	#
+        }#
+        else{#
+        		m_inv <-ginv(dat_mat)#
+        }#
+        x$setinv(m_inv)#
+        #print(m_inv)#
+        m_inv #
+}
+## Put comments here that give an overall description of what your#
+## functions do#
+#
+## Write a short comment describing this function#
+#
+makeCacheMatrix <- function(x = matrix()) {#
+     m_inv <- NULL#
+     setmat <- function(y) {#
+     	x <<- y#
+     	m_inv <<- NULL#
+     }#
+     getmat <- function() x#
+     setinv <- function(mat_inv) m_inv <<- mat_inv#
+     getinv <- function() m_inv#
+     print("inside makeCacheMatrix")#
+     list(setmat = setmat,  setinv =setinv, getmat=getmat, getinv = getinv)#
+}#
+## Write a short comment describing this function#
+#
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+        m_inv <- x$getinv()#
+        if (!is.null(m_inv)){#
+        	print("getting cached info")#
+        	return(m_inv)#
+        }#
+        dat_mat <- x$getmat()#
+        if (ncol(dat_mat) == nrow(dat_mat)) {#
+       			 m_inv <- solve(dat_mat) 	#
+        }#
+        else{#
+        		m_inv <-ginv(dat_mat)#
+        }#
+        x$setinv(m_inv)#
+        #print(m_inv)#
+        m_inv #
+}
+b <- matrix(c(11:16),2,3)
+b
+q <- makeCacheMatrix(b)
+cacheSolve(q)
+cacheSolve(q)
+q$setmat(matrix(c(9:2),4,2))
+cacheSolve(q)
+cacheSolve(q)
